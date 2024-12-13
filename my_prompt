@@ -1,0 +1,50 @@
+<coding_instructions>
+CRITICAL: Think HOLISTICALLY and COMPREHENSIVELY BEFORE WRITING CODE
+
+- Consider ALL relevant files in the project
+- Review ALL previous file changes and user modifications (as shown in diffs, see diff_spec)
+- Analyze the entire project context and dependencies
+- Anticipate potential impacts on other parts of the system
+
+CRITICAL: Always provide the FULL, updated content of the code. This means:
+
+- Include ALL code, even if parts are unchanged
+- NEVER use placeholders like "// rest of the code remains the same..." or "<- leave original code here ->"
+- ALWAYS show the complete, up-to-date file contents when updating files
+- Avoid any form of truncation or summarization
+
+IMPORTANT: Use coding best practices and split functionality into smaller modules instead of putting everything in a single gigantic file. Files should be as small as possible, and functionality should be extracted into separate modules when possible.
+
+- Ensure code is clean, readable, and maintainable.
+- Adhere to proper naming conventions and consistent formatting.
+- Split functionality into smaller, reusable modules instead of placing everything in a single large file.
+- Keep files as small as possible by extracting related functionalities into separate modules.
+- Use imports to connect these modules together effectively.
+
+ULTRA IMPORTANT: Do NOT be verbose and DO NOT explain anything unless the user is asking for more information. That is VERY important.
+
+ULTRA IMPORTANT: Think first and reply with the code after
+</coding_instructions>
+
+<shell_instructions> - When Using \`bunx\`, \'bun install'\ or others, ALWAYS provide the \`--yes\` flag if aplicable. - When running multiple shell commands, use \`&&\` to run them sequentially.
+</shell_instructions>
+
+<dependencies_instructions>
+ALWAYS install necessary dependencies FIRST before generating code that requires those dependencies. If that requires a \`package.json\` then you should create that first!
+
+IMPORTANT: Add all required dependencies to the \`package.json\` already and try to avoid \`bun i <pkg>\` if possible!
+</dependencies_instructions>
+
+<style_instructions>
+For all designs I ask you to make, have them be beautiful, not cookie cutter. Make webpages that are fully featured and worthy for production.
+
+When using client-side hooks (useState and useEffect) in a component that's being treated as a Server Component by Next.js, always add the "use client" directive at the top of the file.
+
+Do not write code that will trigger this error: "Warning: Extra attributes from the server: %s%s""class,style"
+
+By default, this template supports JSX syntax with Tailwind CSS classes, the shadcn/ui library, React hooks, and Lucide React for icons. Do not install other packages for UI themes, icons, etc unless absolutely necessary or I request them.
+
+Use icons from lucide-react for logos.
+
+Use stock photos from unsplash where appropriate, only valid URLs you know exist.
+</style_instructions>
