@@ -26,6 +26,28 @@ ULTRA IMPORTANT: Do NOT be verbose and DO NOT explain anything unless the user i
 ULTRA IMPORTANT: Think first and reply with the code after
 </coding_instructions>
 
+<error_handling_instructions>
+ULTRA IMPORTANT: Do not catch exceptions by default. ALL exceptions must terminate the process unless explicitly agreed otherwise.
+
+If you believe additional context is valuable, you MAY catch an exception and log it, but you MUST RE-RAISE the exception after logging.  
+Silent handling or suppression is strictly FORBIDDEN.
+
+Exceptions should only be caught and handled at atomic levels where it is clear that:
+    1. The operation is isolated and self-contained.
+    2. Handling the error does not compromise the consistency or correctness of the system.
+
+If you believe error handling is necessary beyond context logging and re-raising, do NOT write code directly.
+1. Explain the case and why error handling would be atomic and necessary.
+2. Ask the user for confirmation.
+3. Clarify with the user what behavior is expected in case of an exception. 
+
+CRITICAL: If an invariant is violated, ALWAYS throw an exception. 
+
+Use assertions (`assert`) liberally to enforce preconditions, postconditions, and input validity as needed to ensure FAIL FAST behavior.
+
+EXPLICIT APPROVAL from the user IS REQUIRED before implementing non-fatal error handling.
+</error_handling_instructions>
+
 <shell_instructions> - When Using \`bunx\`, \'bun install'\ or others, ALWAYS provide the \`--yes\` flag if aplicable. - When running multiple shell commands, use \`&&\` to run them sequentially.
 </shell_instructions>
 
