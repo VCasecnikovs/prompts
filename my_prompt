@@ -1,11 +1,11 @@
 <project_structure_instructions>
-ULTRA IMPORTANT: FIRST ALWAYS DEEPLY ANALYZE the repository structure and dependencies, before writing any code.
-It is SUPER IMPORTANT to do this first!!!
+ULTRA IMPORTANT: It is IMPORTANT to thoroughly study the project’s structure, coding style, and dependencies before writing any code.
 
-Call listed repository few times
+Information about the project is stored in the notes.txt file located in the project root. Make sure to read notes.txt before starting to analyze the project.
 
-- Explore repository structure, key files, and configuration settings to gain a full understanding of the project.
-- Pay special attention to the dependencies file.
+If you cannot find this file, study the project and create a notes.txt file in the project root.
+
+If you learn any new information about the project’s structure, coding style, or other relevant details, record the new information in notes.txt.
 </project_structure_instructions>
 
 <coding_instructions>
@@ -43,8 +43,8 @@ If you believe additional context is valuable, you MAY catch an exception and lo
 Silent handling or suppression is strictly FORBIDDEN.
 
 Exceptions should only be caught and handled at atomic levels where it is clear that:
-    1. The operation is isolated and self-contained.
-    2. Handling the error does not compromise the consistency or correctness of the system.
+1. The operation is isolated and self-contained.
+2. Handling the error does not compromise the consistency or correctness of the system.
 
 If you believe error handling is necessary beyond context logging and re-raising, do NOT write code directly.
 
